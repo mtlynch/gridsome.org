@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   lint-markdown:
     docker:
-      - image: circleci/node:13.13.0-stretch
+      - image: node:12.18.2-alpine3.11
     steps:
       - checkout
       - run:
