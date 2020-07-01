@@ -1,0 +1,18 @@
+version: 2.1
+jobs:
+  lint-markdown:
+    docker:
+      - image: circleci/node:13.13.0-stretch
+    steps:
+      - checkout
+      - run:
+          name: Install markdown-lint
+          command: npm install -g markdownlint-cli@0.23.2
+      - run:
+          name: Lint Markdown
+          command: markdownlint '**/*.md' --ignore node_modules
+workflows:
+  version: 2
+  test-deploy:
+    jobs:
+      - lint-markdown
