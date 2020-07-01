@@ -13,6 +13,6 @@ jobs:
           command: markdownlint '**/*.md' --ignore node_modules
 workflows:
   version: 2
-  test-deploy:
+  build:
     jobs:
       - lint-markdown
