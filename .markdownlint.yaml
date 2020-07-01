@@ -3,8 +3,6 @@
 # extremely permissive rules. We'll tighten up these rules over time as we
 # fix previous linter errors.
 
-# heading-increment/header-increment
-MD001: false
 # ul-indent
 MD007: false
 # no-trailing-spaces
